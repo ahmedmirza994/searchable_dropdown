@@ -238,7 +238,7 @@ class _DropdownSearchState<T> extends State<DropdownSearch<T>> {
                   _selectedItemAsString(data),
                 )
               : Text(_selectedItemAsString(data),
-                  style: labelStyle),
+                  style: widget.labelStyle),
         ),
         _manageTrailingIcons(data),
       ],
