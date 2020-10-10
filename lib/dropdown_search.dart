@@ -136,6 +136,9 @@ class DropdownSearch<T> extends StatefulWidget {
 
   ///set a custom color for the popup barrier
   final Color popupBarrierColor;
+  
+  ///set a custom label text style
+  final TextStyle labelStyle;
 
   DropdownSearch({
     Key key,
@@ -175,6 +178,7 @@ class DropdownSearch<T> extends StatefulWidget {
     this.popupShape,
     this.popupItemDisabled,
     this.popupBarrierColor,
+    this.labelStyle,
   })  : assert(autoValidate != null),
         assert(isFilteredOnline != null),
         assert(dropdownBuilderSupportsNullItem != null),
@@ -234,7 +238,7 @@ class _DropdownSearchState<T> extends State<DropdownSearch<T>> {
                   _selectedItemAsString(data),
                 )
               : Text(_selectedItemAsString(data),
-                  style: Theme.of(context).textTheme.subtitle1),
+                  style: labelStyle),
         ),
         _manageTrailingIcons(data),
       ],
